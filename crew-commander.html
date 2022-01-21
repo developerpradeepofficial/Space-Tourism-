@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space tourism website</title>
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://github.com/hankchizljaw/modern-css-reset/blob/master/src/reset.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://cdn-icons-png.flaticon.com/128/2909/2909653.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./index.js" defer></script>
+    <script src="./navigation.js" defer></script>
+    <script src="./tabs.js" defer></script>
+    <script src="./crewNavigation.js" defer></script>
+  </head>
+  <body class="crew">
+    <header class="primary-header flex">
+      <div>
+        <img
+          src="./assets/shared/logo.svg"
+          alt="Space tourism logo"
+          class="logo"
+        />
+      </div>
+      <button class="mobile-nav-toggle" aria-controls="primary-navigation">
+        <span class="sr-only" aria-expanded="false">Menu</span>
+      </button>
+      <nav>
+        <ul
+          id="primary-navigation"
+          class="primary-navigation underline-indicators flex"
+          data-visible="false"
+        >
+          <li>
+            <a
+              class="ff-sans-cond uppercase text-accent letter-spacing-2"
+              href="index.html"
+              ><span aria-hidden="true">00</span>Home</a
+            >
+          </li>
+          <li>
+            <a
+              class="ff-sans-cond uppercase text-accent letter-spacing-2"
+              href="./destination.html"
+              ><span aria-hidden="true">01</span>Destination</a
+            >
+          </li>
+          <li class="active">
+            <a
+              class="ff-sans-cond uppercase text-accent letter-spacing-2"
+              href="./crew-commander.html"
+              ><span aria-hidden="true">02</span>Crew</a
+            >
+          </li>
+          <li>
+            <a
+              class="ff-sans-cond uppercase text-accent letter-spacing-2"
+              href="https://callmepradeep.netlify.app/"
+              ><span aria-hidden="true">03</span>Author</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main" class="grid-container grid-container--crew flow">
+      <h1 class="numbered-title">
+        <span aria-hidden="true">02</span> Meet your crew
+      </h1>
+
+      <div class="dot-indicators flex" id="dot-indicators">
+        <button aria-selected="true" data-member="commander">
+          <span class="sr-only">The commander</span>
+        </button>
+        <button aria-selected="false" data-member="missionSpecialist">
+          <span class="sr-only">The mission specialist</span>
+        </button>
+        <button aria-selected="false" data-member="pilot">
+          <span class="sr-only">The pilot</span>
+        </button>
+        <button aria-selected="false" data-member="crewEngineer">
+          <span class="sr-only">The crew engineer</span>
+        </button>
+      </div>
+
+      <article class="crew-details flow">
+        <header class="flow" style="--flow-space: 1rem">
+          <h2 class="fs-600 ff-serif uppercase" id="roleofTheMember">
+            Commander
+          </h2>
+          <p class="fs-700 uppercase ff-serif" id="crewMemberName">
+            Douglas Hurley
+          </p>
+        </header>
+        <p id="memberInfo">
+          Douglas Gerald Hurley is an American engineer, former Marine Corps
+          pilot and former NASA astronaut. He launched into space for the third
+          time as commander of Crew Dragon Demo-2.
+        </p>
+      </article>
+
+      <picture>
+        <source
+          srcset="assets/crew/image-douglas-hurley.webp"
+          type="image/webp"
+          id="crewPicturesource"
+        />
+        <img
+          src="assets/crew/image-douglas-hurley.png"
+          alt="Douglas Hurley"
+          id="crewImageSource"
+        />
+      </picture>
+    </main>
+  </body>
+</html>
